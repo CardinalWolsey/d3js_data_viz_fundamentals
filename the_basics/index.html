@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js"></script>
+</head>
+<body>
+  <svg>
+    <rect width="50" height="200" style="fill:blue;"/>
+  </svg>
+
+<script>
+  d3.select("body").append("svg").append("rect").attr("width", 200).attr('height', 100).style("fill", "red");
+</script>
+
+</body>
+</html>
