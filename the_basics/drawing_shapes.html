@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js"></script>
+</head>
+<body>
+  <!-- rectangle -->
+  <h3>SVG bar</h3>
+  <svg>
+    <rect width="50" height="200" style="fill:blue"/>
+  </svg>
+  <!-- in d3 -->
+  <h3>D3 bar</h3>
+  <script>
+    d3.select('body')
+      .append('svg')
+      .append('rect')
+      .attr('width', 50)
+      .attr('height', 200)
+      .style('fill', 'blue');
+  </script>
+
+</body>
+</html>
