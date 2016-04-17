@@ -22,5 +22,33 @@
       .style('fill', 'blue');
   </script>
 
+  <!-- circle -->
+  <svg width="50" height="50">
+    <circle cx="25" cy="25" r="25" style="fill:blue"/>
+  </svg>
+
+  <!-- in d3 -->
+  <script type="text/javascript">
+    d3.select('body')
+    .append('svg')
+    .attr('width', 50)
+    .attr('height', 50)
+    .append('circle')
+    .attr('cx', 25)
+    .attr('cy', 25)
+    .attr('r', 25)
+    .style('fill', 'purple');
+  </script>
+
+  <!-- text -->
+  <svg width="250" height="50">
+    <text x="0" y="25">Easy Peasy</text>
+  </svg>
+
+  <!-- in d3 -->
+  <script>
+  d3.select('body').append('svg').attr('width', 250).attr('height', 50).append('text').text('Easy Peasy').attr('y', 25).attr('x', 0).style('fill', 'blue');
+  
+  </script>
 </body>
 </html>
