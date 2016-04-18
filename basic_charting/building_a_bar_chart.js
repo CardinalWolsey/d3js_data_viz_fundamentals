@@ -18,5 +18,5 @@ svg.selectAll('rect')
       y: function(d) {return (h-d);},
       width: (w / dataset.length - padding),
       height: function(d) {return d;},
-      fill: function(d) {return 'rgb(' + (d*10) + ',0,0)';}
+      fill: function(d) {return colorPicker(d);}
     });
