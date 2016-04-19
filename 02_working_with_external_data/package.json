@@ -1,0 +1,14 @@
+{
+  "name": "02_working_with_external_data",
+  "version": "0.1.0",
+  "description": "Accessing csv data and visualizing with d3.js",
+  "main": "csv_data.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "spencer.caldwell@gmail.com",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.13.4"
+  }
+}
