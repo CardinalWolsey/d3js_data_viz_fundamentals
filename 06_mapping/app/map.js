@@ -1,7 +1,11 @@
 var w = 500;
 var h = 300;
 
-var path = d3.geo.path()
+var projection = d3.geo.albersUsa()
+  .translate([w/2, h/2])
+  .scale([500]);
+
+var path = d3.geo.path().projection(projection);
 
 var svg = d3.select('body').append('svg').attr({width:w, height:h});
 
