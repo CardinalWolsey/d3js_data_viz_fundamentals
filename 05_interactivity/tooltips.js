@@ -10,18 +10,33 @@ function colorPicker(v) {
 }
 
 svg.selectAll('rect')
-    .data(dataset)
-    .enter()
-    .append('rect')
-    .attr({
-      x: function(d, i) {return (i * (w/dataset.length));},
-      y: function(d) {return (h-d);},
-      width: (w / dataset.length - padding),
-      height: function(d) {return d;},
-      fill: function(d) {return colorPicker(d);}
-    })
-    //adds hover over tooltip
-    .append('title')
-    .text(function(d) {
-      return d;
-    });
+  .data(dataset)
+  .enter()
+  .append('rect')
+  .attr({
+    x: function(d, i) {return (i * (w/dataset.length));},
+    y: function(d) {return (h-d);},
+    width: (w / dataset.length - padding),
+    height: function(d) {return d;},
+    fill: function(d) {return colorPicker(d);}
+  })
+  //tooltip
+  .on('mouseover', function(d) {
+    svg.append('text')
+      .text(d)
+      .attr({
+        'text-anchor': 'middle',
+        //this is complicated ... look up what it means and how it works
+        x: parseFloat(d3.select(this).attr('x')) + parseFloat(d3.select(this).attr('width') / 2),
+        y: parseFloat(d3.select(this).attr('y')) + 12,
+        'font-family': 'sans-serif',
+        'font-size': 12,
+        'fill': '#ffffff',
+        id: 'tooltip'
+      });
+  })
+
+  //remove tooltip
+  .on('mouseout', function() {
+    d3.select('#tooltip').remove();
+  });
