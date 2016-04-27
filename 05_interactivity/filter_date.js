@@ -1,3 +1,6 @@
+//TODO: add tooltips ... add dots on line pionts,
+//make them opaque ... make them transition with filter
+
 var h = 100;
 var w = 400;
 var padding = 20;
