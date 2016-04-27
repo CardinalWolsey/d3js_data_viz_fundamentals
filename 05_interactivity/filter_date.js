@@ -94,7 +94,11 @@ function updateLine(ds) {
   var yAxisGen = d3.svg.axis().scale(yScale).orient('left').ticks(4);
 
   //creates the svg on the page
-  var svg = d3.select('body').select('#svg-' + ds.category);
+  //the way the transition and the redraw work makes it look a little funky ... fix that
+  var svg = d3.select('body').select('#svg-' + ds.category)
+    .transition()
+    .duration(1000)
+    .ease('linear');
 
   //constructs the line from data
   var lineFunction = d3.svg.line()
